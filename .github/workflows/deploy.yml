@@ -1,0 +1,28 @@
+name: Deploy TIC site
+
+on:
+  push:
+    branches: [v2]
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build static site bundle
+        run: |
+          mkdir -p _site
+          cp index.html about.html events.html contact.html _site/
+          cp -r css js assets _site/
+          touch _site/.nojekyll
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          publish_branch: gh-pages

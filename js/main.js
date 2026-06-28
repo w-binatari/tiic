@@ -1,0 +1,135 @@
+document.addEventListener('DOMContentLoaded', () => {
+    initMobileNav();
+    initHeroParallax();
+    initSmoothScroll();
+    initContactForm();
+    initStickySubNav();
+});
+
+function initMobileNav() {
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.main-nav');
+    if (!toggle || !nav) return;
+
+    toggle.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open);
+    });
+
+    nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => nav.classList.remove('open'));
+    });
+}
+
+function initHeroParallax() {
+    const hero = document.querySelector('.hero');
+    const bg = document.querySelector('.hero-bg');
+    if (!hero || !bg) return;
+
+    const maxShift = 24;
+
+    hero.addEventListener('mousemove', (e) => {
+        const rect = hero.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        bg.style.transform = `translate(${x * maxShift}px, ${y * maxShift}px) scale(1.08)`;
+    });
+
+    hero.addEventListener('mouseleave', () => {
+        bg.style.transform = 'translate(0, 0) scale(1.05)';
+    });
+
+    bg.style.transform = 'scale(1.05)';
+}
+
+function getScrollOffset() {
+    const header = document.querySelector('.site-header');
+    const subNav = document.querySelector('.sub-nav-bar');
+    const headerH = header ? header.offsetHeight : 68;
+    const subNavH = subNav && isSubNavStuck(subNav) ? subNav.offsetHeight : 0;
+    return headerH + subNavH + 8;
+}
+
+function isSubNavStuck(subNav) {
+    const region = subNav.closest('.section-nav-region');
+    if (!region) return false;
+    const rect = subNav.getBoundingClientRect();
+    const header = document.querySelector('.site-header');
+    const headerBottom = header ? header.getBoundingClientRect().bottom : 68;
+    return Math.abs(rect.top - headerBottom) < 2;
+}
+
+function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', (e) => {
+            const id = anchor.getAttribute('href');
+            if (!id || id === '#') return;
+            const target = document.querySelector(id);
+            if (!target) return;
+            e.preventDefault();
+
+            const offset = getScrollOffset();
+            const top = target.getBoundingClientRect().top + window.scrollY - offset;
+            window.scrollTo({ top, behavior: 'smooth' });
+        });
+    });
+}
+
+function initStickySubNav() {
+    const region = document.querySelector('.section-nav-region');
+    const subNavBar = document.querySelector('.sub-nav-bar');
+    if (!region || !subNavBar) return;
+
+    const links = subNavBar.querySelectorAll('.sub-nav a');
+    const sections = Array.from(links)
+        .map(link => document.querySelector(link.getAttribute('href')))
+        .filter(Boolean);
+
+    const header = document.querySelector('.site-header');
+
+    const syncStickyTop = () => {
+        if (!header) return;
+        subNavBar.style.top = `${header.getBoundingClientRect().height}px`;
+    };
+
+    syncStickyTop();
+    window.addEventListener('scroll', syncStickyTop, { passive: true });
+    window.addEventListener('resize', syncStickyTop);
+
+    const observer = new IntersectionObserver(
+        entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    links.forEach(link => {
+                        link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+                    });
+                }
+            });
+        },
+        {
+            rootMargin: `-${getScrollOffset()}px 0px -55% 0px`,
+            threshold: 0,
+        }
+    );
+
+    sections.forEach(section => observer.observe(section));
+}
+
+function initContactForm() {
+    const form = document.querySelector('.contact-form form');
+    if (!form) return;
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const btn = form.querySelector('button[type="submit"]');
+        const original = btn.textContent;
+        btn.textContent = 'Message Sent';
+        btn.disabled = true;
+        setTimeout(() => {
+            btn.textContent = original;
+            btn.disabled = false;
+            form.reset();
+        }, 2500);
+    });
+}

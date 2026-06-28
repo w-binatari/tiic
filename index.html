@@ -3,193 +3,304 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TICC 2026 - Technology Innovation Challenge Competition</title>
-    <!-- Google Fonts -->
+    <meta name="description" content="Tech-Innovation Challenge (TIC) 2026 — A flagship NCDMB programme accelerating Nigeria's energy innovation ecosystem.">
+    <title>TIC 2026 — Tech-Innovation Challenge | NCDMB</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Using Oswald for the bold/grotesque display face and IBM Plex Mono for utility/numbers -->
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="site-header">
-        <div class="container header-container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="NCDMB-LOGO.png" alt="NCDMB Logo" class="logo-img">
-                    <span class="logo-full">Technology Innovation Challenge Competition</span>
-                </a>
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-bar-contact">
+                <a href="tel:07000062362">07000062362</a>
+                <a href="mailto:info@ncdmb.gov.ng">info@ncdmb.gov.ng</a>
+                <span>NCDMB Tower, Yenagoa, Bayelsa State</span>
             </div>
-            <nav class="main-nav">
+            <span class="top-bar-edition">TIC 2026 — Maiden Edition</span>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo-link">
+                <span class="brand-lockup">
+                    <img src="assets/images/tic-logo.png" alt="TIC — Tech Innovation Challenge">
+                    <span class="brand-year">2026</span>
+                </span>
+            </a>
+            <nav class="main-nav" aria-label="Main navigation">
                 <ul>
-                    <li><a href="index.html" class="nav-active">Home</a></li>
-                    <li><a href="details.html">Details</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="facilitators.html">Facilitators</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="events.html">Events</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <a href="apply.html" class="btn btn-primary cta-apply">Apply Now</a>
+            <div class="header-actions">
+                <div class="powered-by">
+                    Powered by
+                    <strong>EICL</strong>
+                </div>
+                <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="container hero-container">
-                <h2 class="hero-title">Innovate.<br>Build.<br>Scale.</h2>
-                <p class="hero-subtitle">The Maiden Edition of a national technology challenge in Nigeria. An NCDMB programme featuring workshops and exhibitions. Grand Finale: December 21, 2026 at the Local Content Towers, Yenagoa.</p>
+        <section class="hero" aria-label="Hero">
+            <div class="hero-bg" aria-hidden="true"></div>
+            <div class="hero-overlay" aria-hidden="true"></div>
+            <div class="container hero-inner">
+                <div class="hero-logo-col">
+                    <a href="https://ncdmb.gov.ng" class="hero-logo-link" target="_blank" rel="noopener">
+                        <img src="assets/images/ncdmb-logo.png" alt="NCDMB — Nigerian Content Development and Monitoring Board" class="hero-ncdmb-logo">
+                    </a>
+                </div>
+                <div class="hero-content">
+                <p class="hero-eyebrow">NCDMB Flagship Programme</p>
+                <h1 class="hero-title">Tech-Innovation Challenge</h1>
+                <p class="hero-subtitle">A flagship initiative of the <a href="https://ncdmb.gov.ng" class="hero-text-link" target="_blank" rel="noopener">Nigerian Content Development &amp; Monitoring Board (NCDMB)</a> designed to accelerate technology-driven innovation for Nigeria's energy future.</p>
                 <div class="hero-actions">
-                    <a href="apply.html" class="btn btn-primary">Apply Now</a>
-                    <a href="details.html" class="btn btn-secondary">Learn More</a>
+                    <a href="https://ncdmb.gov.ng" class="btn btn-gold btn-large" target="_blank" rel="noopener">Visit NCDMB</a>
+                    <a href="events.html" class="btn btn-secondary btn-large">Explore TIC 2026</a>
+                </div>
+                <dl class="hero-meta">
+                    <div>
+                        <dt>Maiden Edition</dt>
+                        <dd>June – October 2026</dd>
+                    </div>
+                    <div>
+                        <dt>Grand Finale</dt>
+                        <dd>NCDMB Tower, Yenagoa</dd>
+                    </div>
+                </dl>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="about-section">
+        <section class="tiles-section" aria-label="Quick links">
             <div class="container">
-                <div class="section-header">
-                    <h2>About TICC</h2>
-                    <p class="section-lead">The Technology Innovation Challenge Competition (TICC) is a premium NCDMB program, organized in partnership with the Energy Researches Innovators Network (ERIN) Committee and partner organisations. As the maiden edition, TICC 2026 is designed to discover, accelerate, and elevate Nigeria's most promising technology solutions through intensive technical workshops, technology exhibitions, and direct engagement with leading industry experts.</p>
-                </div>
-                <div class="benefits-grid">
-                    <div class="benefit-card">
-                        <h3>Industry Experts</h3>
-                        <p>Direct engagement, vetting, and feedback from top-tier industry experts and mentors.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <h3>NCDMB Support</h3>
-                        <p>A flagship NCDMB program offering unmatched market linkages and strategic local content support.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <h3>Maiden Cohort</h3>
-                        <p>Be part of the historic first cohort laying the blueprint for Nigerian technology scaling.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="vision-mission" class="vision-mission-section">
-            <div class="container">
-                <div class="vm-grid">
-                    <div class="vision">
-                        <h2>Vision</h2>
-                        <p>To establish a sustainable pipeline of high-impact technology ventures that strengthen local content and drive national economic and energy transformation.</p>
-                    </div>
-                    <div class="mission">
-                        <h2>Mission</h2>
-                        <p>To rigorously identify, equip, and accelerate the growth of exceptional local innovators by engaging industry experts through structured, challenge-based competition.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="pillars" class="pillars-section">
-            <div class="container">
-                <h2>Why TICC</h2>
-                <div class="pillars-list">
-                    <div class="pillar">
-                        <h3>Rigorous Selection</h3>
-                        <p>A transparent, merit-based screening system to identify high-potential local content solutions.</p>
-                    </div>
-                    <div class="pillar">
-                        <h3>ERIN Committee</h3>
-                        <p>Steered by the Energy Researches Innovators Network to align innovations with industry demands.</p>
-                    </div>
-                    <div class="pillar">
-                        <h3>Workshops &amp; Exhibitions</h3>
-                        <p>Accelerate your growth through technical workshops and showcase your solutions at the TICC national exhibition.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="message" class="message-section">
-            <div class="container">
-                <div class="message-box">
-                    <h2>Maiden Edition Finals</h2>
-                    <blockquote class="eic-quote">
-                        "The grand finale of the Technology Innovation Challenge Competition will hold on December 21, 2026 at the Local Content Towers—the national headquarters of the Nigerian Content Development and Monitoring Board (NCDMB) located at Ox-bow Lake, Yenagoa, Bayelsa State."
-                    </blockquote>
-                    <cite>- TICC ERIN Committee</cite>
-                </div>
-            </div>
-        </section>
-
-        <section class="sponsors-section">
-            <div class="container sponsors-container">
-                <div class="sponsors-header">
-                    <h2>Sponsors & Partners</h2>
-                    <p>Unlocking Nigerian technological capability under the principal sponsorship of NCDMB.</p>
-                </div>
-                <div class="sponsors-grid">
-                    <div class="sponsor-card principal">
-                        <span class="sponsor-tag">Principal Sponsor</span>
-                        <h3>NCDMB</h3>
-                        <p>Nigerian Content Development and Monitoring Board</p>
-                    </div>
-                    <div class="partners-subgrid">
-                        <div class="sponsor-card partner">
-                            <h4>ERIN Committee</h4>
-                            <p style="font-size: 0.8rem; margin-top: 5px; font-family: var(--font-mono);">Energy Researches Innovators Network</p>
+                <div class="tiles-grid">
+                    <article class="tile-card">
+                        <div class="tile-icon" aria-hidden="true">
+                            <svg class="icon icon--light" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="1"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                         </div>
-                        <div class="sponsor-card partner">
-                            <h4>Partner Spot 01</h4>
-                            <p style="font-size: 0.8rem; margin-top: 5px; font-family: var(--font-mono);">Open for Sponsorship</p>
+                        <h3>Programme Timeline</h3>
+                        <p>From programme launch to incubation — every milestone mapped out.</p>
+                        <a href="events.html#timeline">View Timeline</a>
+                    </article>
+                    <article class="tile-card">
+                        <div class="tile-icon" aria-hidden="true">
+                            <svg class="icon icon--light" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 010-5H6"/><path d="M18 9h1.5a2.5 2.5 0 000-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20 17 22"/><path d="M18 2H6v7a6 6 0 0012 0V2z"/></svg>
                         </div>
-                        <div class="sponsor-card partner">
-                            <h4>Partner Spot 02</h4>
-                            <p style="font-size: 0.8rem; margin-top: 5px; font-family: var(--font-mono);">Open for Collaboration</p>
+                        <h3>Meet the Finalists</h3>
+                        <p>Discover the top 15 innovators selected from across Nigeria.</p>
+                        <a href="events.html#finalists">View Finalists</a>
+                    </article>
+                    <article class="tile-card">
+                        <div class="tile-icon" aria-hidden="true">
+                            <svg class="icon icon--light" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
                         </div>
-                    </div>
+                        <h3>Join ERIN Community</h3>
+                        <p>Connect with innovators, mentors, and industry stakeholders.</p>
+                        <a href="https://tech-ideas.ncdmb.gov.ng" target="_blank" rel="noopener">Join Portal</a>
+                    </article>
+                    <article class="tile-card">
+                        <div class="tile-icon" aria-hidden="true">
+                            <svg class="icon icon--light" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                        </div>
+                        <h3>Programme Guide</h3>
+                        <p>Download the full guide to stages, eligibility, and expectations.</p>
+                        <a href="#">Download Guide</a>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section id="apply" class="final-cta-section">
+        <section id="about-preview">
+            <div class="container split-section">
+                <div>
+                    <span class="section-eyebrow">About TIC</span>
+                    <h2 class="section-title">Building Nigeria's next generation of energy innovators</h2>
+                    <p class="section-lead">The Tech-Innovation Challenge (TIC) is a national innovation programme created by NCDMB to identify, nurture, and accelerate high-potential innovators developing solutions for Nigeria's oil, gas, and energy sectors.</p>
+                    <p style="margin-top: 1rem; color: var(--ink-muted);">Through screening, pitching, mentorship, bootcamp, and final showcase — TIC empowers innovators with the skills, exposure, and support needed to scale their ideas into impactful solutions.</p>
+                    <a href="about.html" class="btn btn-primary" style="margin-top: 1.5rem;">Learn More About TIC</a>
+                </div>
+                <img src="assets/images/hero_image.jpeg" alt="NCDMB Tower, Yenagoa" class="content-photo">
+            </div>
+        </section>
+
+        <section id="phases">
+            <div class="container">
+                <div class="section-heading-block text-center">
+                    <span class="section-eyebrow">The Journey</span>
+                    <h2 class="section-title">Programme Phases</h2>
+                    <p class="section-lead">A competitive multi-stage process from screening to incubation.</p>
+                </div>
+                <div class="funnel" aria-label="Competition funnel">
+                    <div class="funnel-step">Participants</div>
+                    <div class="funnel-step">Top 30 — Screening</div>
+                    <div class="funnel-step">Top 15 — Online Pitching</div>
+                    <div class="funnel-step">Finalists &amp; Winners</div>
+                </div>
+                <div class="phases-scroll">
+                    <article class="phase-card">
+                        <span class="phase-num">01</span>
+                        <h3>Mobilisation</h3>
+                        <p>Nationwide outreach and programme mobilisation.</p>
+                    </article>
+                    <article class="phase-card">
+                        <span class="phase-num">02</span>
+                        <h3>Screening</h3>
+                        <p>Expert panel selects the top 30 innovators.</p>
+                    </article>
+                    <article class="phase-card">
+                        <span class="phase-num">03</span>
+                        <h3>Pitching</h3>
+                        <p>Virtual pitches to shortlist 15 finalists.</p>
+                    </article>
+                    <article class="phase-card">
+                        <span class="phase-num">04</span>
+                        <h3>Mentorship</h3>
+                        <p>Four-week structured training with industry mentors.</p>
+                    </article>
+                    <article class="phase-card">
+                        <span class="phase-num">05</span>
+                        <h3>Bootcamp</h3>
+                        <p>Six-day intensive programme at NCDMB Tower, Yenagoa.</p>
+                    </article>
+                    <article class="phase-card">
+                        <span class="phase-num">06</span>
+                        <h3>Finals</h3>
+                        <p>Live pitch presentations and winner selection.</p>
+                    </article>
+                    <article class="phase-card">
+                        <span class="phase-num">07</span>
+                        <h3>Incubation</h3>
+                        <p>Post-competition support, funding access, and linkages.</p>
+                    </article>
+                </div>
+                <p style="text-align: center; margin-top: 1.5rem;">
+                    <a href="events.html#structure" class="btn btn-outline">View Full Programme Structure</a>
+                </p>
+            </div>
+        </section>
+
+        <section id="news">
+            <div class="container">
+                <span class="section-eyebrow">Latest Updates</span>
+                <h2 class="section-title">Featured News</h2>
+                <p class="section-lead">Stay updated with announcements, milestones, and stories from the TIC innovation community.</p>
+                <div class="news-grid">
+                    <article class="news-card">
+                        <div class="img-placeholder" role="img" aria-label="News image placeholder">
+                            <svg class="icon" viewBox="0 0 24 24"><path d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z"/></svg>
+                            <span>News Photo</span>
+                        </div>
+                        <div class="news-body">
+                            <h3>TIC 2026 Programme Underway</h3>
+                            <p>The maiden edition of the Tech-Innovation Challenge is progressing through screening, mentorship, and bootcamp phases.</p>
+                            <a href="#">Read More</a>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <div class="img-placeholder" role="img" aria-label="News image placeholder">
+                            <svg class="icon" viewBox="0 0 24 24"><path d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z"/></svg>
+                            <span>News Photo</span>
+                        </div>
+                        <div class="news-body">
+                            <h3>Bootcamp Dates Announced</h3>
+                            <p>Finalists will convene at NCDMB Tower, Yenagoa for an intensive six-day development programme.</p>
+                            <a href="#">Read More</a>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <div class="img-placeholder" role="img" aria-label="News image placeholder">
+                            <svg class="icon" viewBox="0 0 24 24"><path d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z"/></svg>
+                            <span>News Photo</span>
+                        </div>
+                        <div class="news-body">
+                            <h3>Meet the Mentors</h3>
+                            <p>Industry leaders and researchers join TIC 2026 to guide finalists through the mentorship phase.</p>
+                            <a href="#">Read More</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="partners">
             <div class="container text-center">
-                <h2>Ready to Build?</h2>
-                <p>Applications for the TICC 2026 maiden cohort close soon.</p>
+                <span class="section-eyebrow">Partners</span>
+                <h2 class="section-title">Hosted by NCDMB, Powered by EICL</h2>
+                <div class="partners-row">
+                    <div class="partner-logo">
+                        <img src="assets/images/ncdmb-logo.png" alt="NCDMB — Nigerian Content Development and Monitoring Board">
+                    </div>
+                    <div class="partner-logo partner-logo--eic">
+                        <img src="assets/images/eic-wordmark.png" alt="EICL — Entrepreneurship and Innovation Centre Ltd">
+                    </div>
+                    <div class="img-placeholder img-placeholder--square" style="width: 120px; aspect-ratio: 1;" role="img" aria-label="Partner logo placeholder">
+                        <span>Partner</span>
+                        <small>Logo TBC</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-band">
+            <div class="container">
+                <h2 class="section-title">Stay connected with TIC 2026</h2>
+                <p class="section-lead">Explore programme updates, finalists, and partnership opportunities.</p>
                 <div class="cta-group">
-                    <a href="apply.html" class="btn btn-primary btn-large">Apply Now</a>
-                    <a href="contact.html" class="btn btn-outline">Become a Partner</a>
+                    <a href="events.html" class="btn btn-gold btn-large">View Events</a>
+                    <a href="contact.html" class="btn btn-secondary btn-large">Become a Partner</a>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <div class="container footer-container">
-            <div class="footer-info">
-                <h2>TICC 2026</h2>
-                <p>An NCDMB Programme</p>
-                <div class="footer-logo-block">
-                    <span style="font-size: 0.65rem; text-transform: uppercase; opacity: 0.5; font-family: var(--font-mono); display: block; letter-spacing: 1px;">Organising Partner</span>
-                    <img src="EIC_WORDMARK.png" alt="EIC Wordmark">
-                </div>
+        <div class="footer-top">
+            <div class="container footer-top-inner">
+                <span>Nigerian Content Tower, Yenagoa, Bayelsa State</span>
+                <span>Mon – Fri: 8:00 am – 6:00 pm</span>
+                <a href="https://ncdmb.gov.ng" target="_blank" rel="noopener">ncdmb.gov.ng</a>
+            </div>
+        </div>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <img src="assets/images/tic-logo.png" alt="TIC Logo" class="footer-logo">
+                <p>Tech-Innovation Challenge — a flagship programme of the Nigerian Content Development &amp; Monitoring Board.</p>
+                <p class="footer-tagline">Powered by EICL</p>
             </div>
             <div class="footer-links">
-                <div class="link-group">
-                    <h4>Programme</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="details.html">Details</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                    </ul>
-                </div>
-                <div class="link-group">
-                    <h4>Connect</h4>
-                    <ul>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="facilitators.html">Facilitators</a></li>
-                        <li><a href="#">LinkedIn</a></li>
-                    </ul>
-                </div>
+                <h4>Navigate</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Related Links</h4>
+                <ul>
+                    <li><a href="https://ncdmb.gov.ng" target="_blank" rel="noopener">NCDMB Official Website</a></li>
+                    <li><a href="https://www.ncdmbnogof.org/" target="_blank" rel="noopener">NOGOF</a></li>
+                    <li><a href="https://tech-ideas.ncdmb.gov.ng" target="_blank" rel="noopener">Tech-IDEAS Portal</a></li>
+                </ul>
             </div>
         </div>
         <div class="container footer-bottom">
-            <p>&copy; 2026 Technology Innovation Challenge Competition. All rights reserved.</p>
+            <p>Copyright &copy; 2026 Nigerian Content Development &amp; Monitoring Board</p>
+            <p>ncdmb-tic.org</p>
         </div>
     </footer>
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
