@@ -326,25 +326,17 @@ h1, h2, h3, h4 {
 .brand-lockup {
     display: inline-flex;
     align-items: center;
-    gap: 0.45rem;
     flex-shrink: 0;
     white-space: nowrap;
+    height: 100%;
 }
 
 .brand-lockup img {
-    height: 58px;
+    height: 62px;
     width: auto;
+    max-height: calc(var(--header-h) - 6px);
     flex-shrink: 0;
-}
-
-.brand-year {
-    font-family: var(--font-heading);
-    font-weight: 800;
-    font-size: 1.4rem;
-    color: var(--ncdmb-green);
-    line-height: 1;
-    letter-spacing: -0.02em;
-    flex-shrink: 0;
+    object-fit: contain;
 }
 
 .edition-badge {
@@ -830,15 +822,102 @@ section:nth-child(even):not(.hero):not(.page-hero):not(.cta-band):not(.tiles-sec
     object-fit: contain;
 }
 
-.partner-logo--eic img {
-    height: 44px;
+.partner-logo--eic {
+    text-align: center;
 }
 
-.eicl-tagline {
+.partner-logo--eic img {
+    height: 52px;
+    max-width: 280px;
+    margin-inline: auto;
+    opacity: 0.92;
+}
+
+.partner-role {
+    display: block;
+    margin-top: 0.55rem;
+    font-family: var(--font-heading);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+}
+
+.r2c-strip {
+    background: var(--ncdmb-green);
+    color: #fff;
     text-align: center;
+    padding: 0.85rem 1rem;
+    font-family: var(--font-heading);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.pillar-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--ncdmb-gold);
+    padding: 1.25rem;
+    text-align: center;
+}
+
+.pillar-card h3 {
+    font-size: 0.82rem;
+    color: var(--ncdmb-green-dark);
+    margin-bottom: 0.35rem;
+}
+
+.pillar-card p {
+    font-size: 0.8rem;
+    color: var(--ink-muted);
+}
+
+.journey-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.journey-step {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 1.5rem 1.25rem;
+}
+
+.journey-step .step-label {
+    font-family: var(--font-heading);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ncdmb-gold-dark);
+    margin-bottom: 0.4rem;
+}
+
+.journey-step h3 {
+    font-size: 1rem;
+    color: var(--ncdmb-green-dark);
+    margin-bottom: 0.35rem;
+}
+
+.journey-step p {
     font-size: 0.85rem;
     color: var(--ink-muted);
-    margin-top: 0.5rem;
+}
+
+.social-links a {
+    color: inherit;
 }
 
 /* CTA band */
@@ -1404,7 +1483,9 @@ section:nth-child(even):not(.hero):not(.page-hero):not(.cta-band):not(.tiles-sec
     .news-grid,
     .gallery-grid,
     .objectives-grid,
-    .stats-row {
+    .stats-row,
+    .pillars-grid,
+    .journey-steps {
         grid-template-columns: 1fr 1fr;
     }
 
@@ -1427,11 +1508,8 @@ section:nth-child(even):not(.hero):not(.page-hero):not(.cta-band):not(.tiles-sec
     }
 
     .brand-lockup img {
-        height: 46px;
-    }
-
-    .brand-year {
-        font-size: 1.15rem;
+        height: 52px;
+        max-height: calc(var(--header-h) - 8px);
     }
 
     .header-inner {
@@ -1493,7 +1571,9 @@ section:nth-child(even):not(.hero):not(.page-hero):not(.cta-band):not(.tiles-sec
 
     .news-grid,
     .gallery-grid,
-    .objectives-grid {
+    .objectives-grid,
+    .pillars-grid,
+    .journey-steps {
         grid-template-columns: 1fr;
     }
 
