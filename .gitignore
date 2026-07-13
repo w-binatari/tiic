@@ -5,3 +5,6 @@ __pycache__/
 
 node_modules/
 .vercel/
+
+# Source dump (deployed copies live under assets/images/gallery)
+gallery/
