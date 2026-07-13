@@ -1,4 +1,4 @@
-/* TIC 2026 — styled to align with ncdmb.gov.ng & ncdmbnogof.org */
+/* TIC 2026 - styled to align with ncdmb.gov.ng & ncdmbnogof.org */
 
 :root {
     --ncdmb-green: #006837;
@@ -562,7 +562,7 @@ section:nth-child(even):not(.hero):not(.page-hero):not(.cta-band):not(.tiles-sec
     background: var(--surface-alt);
 }
 
-/* Quick tiles — NOGOF card row */
+/* Quick tiles - NOGOF card row */
 .tiles-section {
     padding: 0;
     margin-top: -2.5rem;
@@ -645,7 +645,7 @@ section:nth-child(even):not(.hero):not(.page-hero):not(.cta-band):not(.tiles-sec
     align-items: center;
 }
 
-/* Objectives — icon blocks like ncdmb.gov.ng focus areas */
+/* Objectives - icon blocks like ncdmb.gov.ng focus areas */
 .objectives-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -916,8 +916,44 @@ section:nth-child(even):not(.hero):not(.page-hero):not(.cta-band):not(.tiles-sec
     color: var(--ink-muted);
 }
 
-.social-links a {
-    color: inherit;
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-top: 0.35rem;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transition: background 0.2s, color 0.2s;
+}
+
+.social-icon:hover {
+    background: var(--ncdmb-gold);
+    color: var(--ncdmb-green-dark);
+}
+
+.social-icon svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+.contact-details .social-icon {
+    background: var(--ncdmb-green-light);
+    color: var(--ncdmb-green);
+}
+
+.contact-details .social-icon:hover {
+    background: var(--ncdmb-green);
+    color: #fff;
 }
 
 /* CTA band */
@@ -968,7 +1004,7 @@ section:nth-child(even):not(.hero):not(.page-hero):not(.cta-band):not(.tiles-sec
     color: rgba(255, 255, 255, 0.85);
 }
 
-/* Timeline — horizontal NOGOF style */
+/* Timeline - horizontal NOGOF style */
 .timeline {
     margin-top: 2rem;
 }
@@ -1325,7 +1361,7 @@ section:nth-child(even):not(.hero):not(.page-hero):not(.cta-band):not(.tiles-sec
     line-height: 1.35;
 }
 
-/* Footer — ncdmb.gov.ng style */
+/* Footer - ncdmb.gov.ng style */
 .site-footer {
     background: var(--ncdmb-green-dark);
     color: rgba(255, 255, 255, 0.82);
