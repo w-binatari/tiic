@@ -1227,6 +1227,127 @@ section:nth-child(even):not(.hero):not(.page-hero):not(.cta-band):not(.tiles-sec
     font-size: 1.5rem;
 }
 
+/* About NCDMB */
+.ncdmb-about {
+    background: linear-gradient(180deg, #f7faf8 0%, #fff 55%);
+}
+
+.ncdmb-about-intro {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.ncdmb-about-tagline {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--ncdmb-gold-dark);
+    margin: 0.35rem 0 1rem;
+}
+
+.ncdmb-about-body {
+    margin-top: 0.85rem;
+    color: var(--ink-muted);
+    max-width: 38rem;
+}
+
+.ncdmb-about-meta {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 1.75rem 0 1.75rem;
+    padding: 1.15rem 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.ncdmb-about-meta dt {
+    font-family: var(--font-heading);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ncdmb-green);
+    margin-bottom: 0.35rem;
+}
+
+.ncdmb-about-meta dd {
+    font-size: 0.9rem;
+    color: var(--ink);
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.ncdmb-about-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.ncdmb-about-aside {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+.ncdmb-about-logo {
+    width: min(220px, 70%);
+    height: auto;
+    object-fit: contain;
+}
+
+.ncdmb-about-photo {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border: 1px solid var(--border);
+}
+
+.ncdmb-pillars {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 2.5rem;
+}
+
+.ncdmb-pillar {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--ncdmb-green);
+    padding: 1.35rem 1.25rem;
+}
+
+.ncdmb-pillar h3 {
+    font-size: 0.9rem;
+    color: var(--ncdmb-green-dark);
+    margin-bottom: 0.45rem;
+}
+
+.ncdmb-pillar p {
+    font-size: 0.82rem;
+    color: var(--ink-muted);
+    line-height: 1.55;
+}
+
+.ncdmb-about-partner {
+    margin-top: 2.25rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.ncdmb-about-partner img {
+    max-height: 52px;
+    width: auto;
+    object-fit: contain;
+}
+
 /* Stage blocks */
 .stage-block {
     display: grid;
@@ -1512,8 +1633,17 @@ section:nth-child(even):not(.hero):not(.page-hero):not(.cta-band):not(.tiles-sec
     .split-section,
     .contact-grid,
     .stage-block,
-    .footer-grid {
+    .footer-grid,
+    .ncdmb-about-intro {
         grid-template-columns: 1fr;
+    }
+
+    .ncdmb-about-meta {
+        grid-template-columns: 1fr;
+    }
+
+    .ncdmb-pillars {
+        grid-template-columns: 1fr 1fr;
     }
 
     .news-grid,
@@ -1609,7 +1739,8 @@ section:nth-child(even):not(.hero):not(.page-hero):not(.cta-band):not(.tiles-sec
     .gallery-grid,
     .objectives-grid,
     .pillars-grid,
-    .journey-steps {
+    .journey-steps,
+    .ncdmb-pillars {
         grid-template-columns: 1fr;
     }
 
