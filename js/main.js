@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initSmoothScroll();
     initContactForm();
     initStickySubNav();
+    initJourneySteps();
 });
 
 function initMobileNav() {
@@ -131,5 +132,36 @@ function initContactForm() {
             btn.disabled = false;
             form.reset();
         }, 2500);
+    });
+}
+
+function initJourneySteps() {
+    const container = document.querySelector('.journey-steps--interactive');
+    if (!container) return;
+
+    const steps = container.querySelectorAll('.journey-step');
+    const panel = document.querySelector('.journey-panel');
+    if (!steps.length || !panel) return;
+
+    const activate = (step) => {
+        const key = step.dataset.step;
+        steps.forEach(s => {
+            const active = s === step;
+            s.classList.toggle('is-active', active);
+            s.setAttribute('aria-selected', active);
+        });
+        panel.querySelectorAll('.journey-panel-item').forEach(item => {
+            item.classList.toggle('is-active', item.dataset.step === key);
+        });
+    };
+
+    steps.forEach(step => {
+        step.addEventListener('click', () => activate(step));
+        step.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                activate(step);
+            }
+        });
     });
 }

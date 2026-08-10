@@ -8,3 +8,4 @@ node_modules/
 
 # Source dump (deployed copies live under assets/images/gallery)
 /gallery/
+.env*
