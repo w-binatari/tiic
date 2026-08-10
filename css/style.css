@@ -1645,6 +1645,154 @@ section:nth-child(even):not(.hero):not(.page-hero):not(.cta-band):not(.tiles-sec
     object-fit: contain;
 }
 
+/* About EICL */
+.eicl-about {
+    background: var(--surface-alt);
+}
+
+.eicl-intro {
+    display: grid;
+    grid-template-columns: 1fr 240px;
+    gap: 3rem;
+    align-items: center;
+}
+
+.eicl-intro > div > p + p {
+    margin-top: 1rem;
+    color: var(--ink-muted);
+}
+
+.eicl-section-logo {
+    width: 100%;
+    max-height: 120px;
+    object-fit: contain;
+    padding: 1.25rem;
+    background: #fff;
+    border: 1px solid var(--border);
+}
+
+.eicl-columns {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.eicl-panel {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--ncdmb-green);
+    padding: 1.5rem;
+}
+
+.eicl-panel h3,
+.eicl-leadership h3 {
+    color: var(--ncdmb-green-dark);
+    font-size: 1.05rem;
+    margin-bottom: 0.85rem;
+}
+
+.eicl-panel p,
+.eicl-list,
+.eicl-numbered-list {
+    color: var(--ink-muted);
+    font-size: 0.875rem;
+}
+
+.eicl-list,
+.eicl-numbered-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.eicl-list li {
+    padding-left: 1rem;
+    position: relative;
+}
+
+.eicl-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.65em;
+    width: 5px;
+    height: 5px;
+    background: var(--ncdmb-gold);
+}
+
+.eicl-numbered-list {
+    list-style: decimal;
+    padding-left: 1.25rem;
+}
+
+.eicl-numbered-list li {
+    padding-left: 0.35rem;
+}
+
+.eicl-numbered-list strong,
+.eicl-numbered-list span {
+    display: block;
+}
+
+.eicl-numbered-list strong {
+    color: var(--ink);
+    margin-bottom: 0.2rem;
+}
+
+.eicl-leadership {
+    display: grid;
+    grid-template-columns: minmax(240px, 0.7fr) 1.3fr;
+    gap: 2.5rem;
+    align-items: start;
+    margin-top: 2.5rem;
+    padding: 2rem;
+    background: #fff;
+    border: 1px solid var(--border);
+}
+
+.eicl-leadership-photo {
+    overflow: hidden;
+    background: var(--ncdmb-green-light);
+}
+
+.eicl-leadership-photo img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: 34% top;
+}
+
+.eicl-leadership p {
+    color: var(--ink-muted);
+    margin-top: 0.8rem;
+}
+
+.eicl-leadership .eicl-role {
+    margin-top: -0.55rem;
+    color: var(--ncdmb-gold-dark);
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+.eicl-lower {
+    grid-template-columns: 0.8fr 1.2fr;
+}
+
+.eicl-tagline {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding: 1.15rem 1.5rem;
+    color: #fff;
+    background: var(--ncdmb-green-dark);
+}
+
+.eicl-tagline span {
+    color: var(--ncdmb-gold);
+}
+
 /* Stage blocks */
 .stage-block {
     display: grid;
@@ -1960,7 +2108,10 @@ section:nth-child(even):not(.hero):not(.page-hero):not(.cta-band):not(.tiles-sec
     .contact-grid,
     .stage-block,
     .footer-grid,
-    .ncdmb-about-intro {
+    .ncdmb-about-intro,
+    .eicl-intro,
+    .eicl-columns,
+    .eicl-leadership {
         grid-template-columns: 1fr;
     }
 
@@ -1970,6 +2121,10 @@ section:nth-child(even):not(.hero):not(.page-hero):not(.cta-band):not(.tiles-sec
 
     .ncdmb-pillars {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .eicl-section-logo {
+        max-width: 280px;
     }
 
     .status-glance {
@@ -2106,6 +2261,18 @@ section:nth-child(even):not(.hero):not(.page-hero):not(.cta-band):not(.tiles-sec
         flex-direction: column;
         gap: 1.5rem;
         padding: 1.5rem;
+    }
+
+    .eicl-leadership {
+        padding: 1.25rem;
+    }
+
+    .eicl-leadership-photo {
+        max-width: 360px;
+    }
+
+    .eicl-tagline {
+        flex-direction: column;
     }
 
     .stats-row {
