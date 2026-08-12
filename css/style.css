@@ -2679,6 +2679,7 @@ section:nth-child(even):not(.hero):not(.page-hero):not(.cta-band):not(.tiles-sec
     .council-featured-grid,
     .council-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
     .council-card--executive {
@@ -2688,6 +2689,50 @@ section:nth-child(even):not(.hero):not(.page-hero):not(.cta-band):not(.tiles-sec
     .council-card--executive .council-card-photo img {
         min-height: auto;
         aspect-ratio: 3 / 4;
+    }
+
+    /* Tighten card typography/spacing for small screens */
+    .council-card-body {
+        padding: 0.95rem 1rem 1.05rem;
+    }
+
+    .council-card-body h3 {
+        font-size: 1rem;
+    }
+
+    .council-card--featured .council-card-body h3 {
+        font-size: 1.05rem;
+    }
+
+    .council-card-body p {
+        font-size: 0.82rem;
+        line-height: 1.5;
+    }
+
+    .council-badge {
+        margin-bottom: 0.5rem;
+    }
+
+    /* Avoid hover “lift” feeling on touch devices */
+    .council-card:hover {
+        transform: none;
+        box-shadow: 0 6px 18px rgba(0, 77, 41, 0.08);
+    }
+}
+
+@media (max-width: 480px) {
+    .council-featured-grid,
+    .council-grid {
+        gap: 0.85rem;
+        margin-bottom: 0.9rem;
+    }
+
+    .council-card-body {
+        padding: 0.85rem 0.9rem 0.95rem;
+    }
+
+    .council-card-body h3 {
+        font-size: 0.98rem;
     }
 }
 
