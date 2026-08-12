@@ -4140,40 +4140,155 @@ section:nth-child(even):not(.hero):not(.page-hero):not(.cta-band):not(.tiles-sec
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .es-appreciation-inner {
-        grid-template-columns: 96px 1fr;
-        gap: 1.25rem;
-    }
-
-    .es-appreciation-photo {
-        width: 96px;
-        height: 96px;
-    }
-}
-
-@media (max-width: 640px) {
-    .portrait-grid--4,
-    .portrait-grid--5,
-    .finalists-grid {
-        grid-template-columns: 1fr;
+    .es-appreciation {
+        padding: 2rem 0 2.25rem;
     }
 
     .es-appreciation-inner {
         grid-template-columns: 1fr;
         justify-items: center;
         text-align: center;
+        gap: 1.1rem;
+    }
+
+    .es-appreciation-photo {
+        width: 88px;
+        height: 88px;
+    }
+
+    .es-appreciation-quote p {
+        font-size: 0.98rem;
+        line-height: 1.65;
     }
 
     .es-appreciation-quote footer {
         align-items: center;
     }
 
+    .leadership-section,
+    .judges-section {
+        padding: 2.75rem 0;
+    }
+
+    .portrait-grid {
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .portrait-card-photo img {
+        aspect-ratio: 3 / 4;
+    }
+
+    .portrait-card-body {
+        padding: 0.9rem 0.95rem 1rem;
+    }
+
+    .portrait-card-body h3 {
+        font-size: 0.92rem;
+    }
+
+    .portrait-card-body p {
+        font-size: 0.78rem;
+    }
+
+    .judges-chair {
+        margin: 1.5rem 0 1rem;
+    }
+
     .judges-chair .portrait-card {
+        width: min(240px, 100%);
+    }
+
+    .finalists-grid {
+        gap: 1rem;
+    }
+
+    .finalist-photo img {
+        aspect-ratio: 3 / 4;
+    }
+
+    .finalist-photo--group img {
+        aspect-ratio: 16 / 10;
+    }
+
+    .finalist-tile-body {
+        padding: 1rem;
+    }
+
+    .eicl-panel--leadership .eicl-leadership-photo {
+        max-width: 200px;
+    }
+
+    .eicl-contact-line {
+        flex-direction: column;
+        gap: 0.45rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .portrait-grid--4,
+    .portrait-grid--5,
+    .finalists-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .judges-chair .portrait-card {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .finalist-filters {
+        margin: 1.15rem 0 1.25rem;
+    }
+
+    .finalist-filters input[type="search"] {
+        flex: 1 1 100%;
         width: 100%;
     }
 
     .portrait-card:hover,
     .finalist-tile:hover {
         transform: none;
+    }
+
+    .es-appreciation,
+    .leadership-section,
+    .judges-section {
+        overflow-x: clip;
+    }
+}
+
+@media (max-width: 480px) {
+    .es-appreciation-quote p {
+        font-size: 0.94rem;
+    }
+
+    .portrait-card-photo img,
+    .finalist-photo img {
+        aspect-ratio: 4 / 5;
+        max-height: 320px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .finalist-photo--group img {
+        aspect-ratio: 16 / 10;
+        max-height: none;
+    }
+
+    .portrait-grid,
+    .finalists-grid {
+        gap: 0.85rem;
+    }
+
+    .finalist-tile .finalist-project {
+        font-size: 0.84rem;
+    }
+
+    .finalist-tile .finalist-blurb {
+        font-size: 0.8rem;
     }
 }
