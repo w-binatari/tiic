@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initContactForm();
     initStickySubNav();
     initJourneySteps();
+    initFinalistFilters();
 });
 
 function initMobileNav() {
@@ -164,4 +165,55 @@ function initJourneySteps() {
             }
         });
     });
+}
+
+function initFinalistFilters() {
+    const grid = document.getElementById('finalists-grid');
+    const search = document.getElementById('finalist-search');
+    const count = document.getElementById('finalist-filter-count');
+    if (!grid) return;
+
+    const tiles = Array.from(grid.querySelectorAll('.finalist-tile'));
+
+    tiles.forEach(tile => {
+        const project = tile.querySelector('.finalist-project');
+        const button = tile.querySelector('.finalist-read-more');
+        if (!project || !button) return;
+
+        const full = project.dataset.fullTitle || project.textContent.trim();
+        project.dataset.fullTitle = full;
+
+        const needsTruncate = full.length > 90;
+        if (!needsTruncate) return;
+
+        project.classList.add('is-truncated');
+        button.hidden = false;
+        button.addEventListener('click', () => {
+            const expanded = project.classList.toggle('is-expanded');
+            project.classList.toggle('is-truncated', !expanded);
+            button.textContent = expanded ? 'Show less' : 'Read more';
+        });
+    });
+
+    if (!search || !count) return;
+
+    const update = () => {
+        const q = search.value.trim().toLowerCase();
+        let visible = 0;
+        tiles.forEach(tile => {
+            const haystack = [
+                tile.dataset.name || '',
+                tile.dataset.org || '',
+                tile.dataset.title || '',
+                tile.id || ''
+            ].join(' ');
+            const match = !q || haystack.includes(q);
+            tile.hidden = !match;
+            if (match) visible += 1;
+        });
+        count.textContent = `Showing ${visible} of ${tiles.length}`;
+    };
+
+    search.addEventListener('input', update);
+    update();
 }
