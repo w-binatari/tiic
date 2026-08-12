@@ -1,0 +1,40 @@
+{
+  "leadership": [
+    { "file": "leadership/dignitary-president-tinubu.jpg", "name": "His Excellency Bola Ahmed Tinubu (GCFR)", "title": "President, Federal Republic of Nigeria", "source": "main:president tinubu.png" },
+    { "file": "leadership/dignitary-minister-lokpobiri.jpg", "name": "Sen. Heineken Lokpobiri", "title": "Hon. Minister of State, Petroleum Resources (Oil)", "source": "main:lokpobiri.png" },
+    { "file": "leadership/dignitary-minister-ekpo.jpg", "name": "Rt. Hon. (Obongemem) Ekperikpe Ekpo", "title": "Hon. Minister of State, Petroleum Resources (Gas)", "source": "main:assets/images/governing-council/Sen-Ekpo-Gas.jpg" },
+    { "file": "leadership/dignitary-governor-diri.jpg", "name": "His Excellency Senator Douye Diri", "title": "Executive Governor, Bayelsa State", "source": "placeholder (official portrait not in upload set)" },
+    { "file": "leadership/dignitary-es-ogbe.jpg", "name": "Engr. Felix Omatsola Ogbe", "title": "Executive Secretary, NCDMB", "source": "main:assets/images/governing-council/Felix-Ogbe-ES.jpg" },
+    { "file": "leadership/dignitary-director-halilu.jpg", "name": "Dr. Abdulmalik Halilu", "title": "Director, Corporate Services, NCDMB", "source": "main:abdulmalik.png" },
+    { "file": "leadership/dignitary-ajimijaye.jpg", "name": "Mr. Silas Omomehin Ajimijaye", "title": "Ag. Director, Planning, Research and Statistics, NCDMB", "source": "main:silas.png" },
+    { "file": "leadership/dignitary-chinwah.jpg", "name": "Engr. Chika Henry Chinwah", "title": "Implementing Partner/Facilitator, NCDMB TIC; CEO, EICL", "source": "main:engr chika .png" }
+  ],
+  "judges": [
+    { "file": "judges/judge-amao.jpg", "name": "Dr. Ibilola Amao", "title": "Chairperson; Principal Consult, Lonadek Global Services", "source": "main:dr ibiola.png" },
+    { "file": "judges/judge-mukhtar.jpg", "name": "Prof. Abdulkadir Mukhtar", "title": "Centre Director, NCDMB Centre of Excellence on Technology Development Studies, FUT Minna", "source": "main:prof mukhtar.png" },
+    { "file": "judges/judge-agbanimu.jpg", "name": "Destiny Agbanimu", "title": "CEO, Eridan City–Centre of Innovation Development (ECID)", "source": "main:destiny.png" },
+    { "file": "judges/judge-nwinee.jpg", "name": "Dr. Sarah A. Nwinee", "title": "Head, Linkages, Exchange & Partnership, PTI", "source": "main:dr sarah.png" },
+    { "file": "judges/judge-okoyo.jpg", "name": "Engr. George Okoyo", "title": "MD, Point Engineering Limited", "source": "main:engr george.png" },
+    { "file": "judges/judge-awoke.jpg", "name": "Chris Awoke", "title": "CEO, Wikrena Limited", "source": "main:chris awoke.png" }
+  ],
+  "eicl": [
+    { "file": "eicl/eicl-ceo-chinwah.jpg", "name": "Engr. Chika Chinwah", "title": "CEO, EICL", "source": "copy of leadership/dignitary-chinwah.jpg" }
+  ],
+  "finalists": [
+    { "file": "finalists/finalist-01-obsidian.jpg", "appId": "TICC-2026-APP-028", "name": "Uthman B. Mohammed", "organization": "Obsidian Gas and Energy Nig. Limited", "source": "main:obsidian.png" },
+    { "file": "finalists/finalist-02-ajibade.jpg", "appId": "TICC-2026-APP-031", "name": "Babson Ajibade", "source": "main:babson.png" },
+    { "file": "finalists/finalist-03-ugwu.jpg", "appId": "TICC-2026-APP-057", "name": "Prof. Chidiebere Ugwu", "source": "main:prof chidiebere.png" },
+    { "file": "finalists/finalist-04-ahmed.jpg", "appId": "TICC-2026-APP-059", "name": "Omar Umar Ahmed", "source": "main:omar umah ahmed.png" },
+    { "file": "finalists/finalist-05-ace-cefor1.jpg", "appId": "TICC-2026-APP-013", "name": "Fossong Guilianno (team contact)", "organization": "ACE-CEFOR 1, UNIPORT", "groupPhoto": true, "source": "main:ace-cefafor.png" },
+    { "file": "finalists/finalist-06-adesope.jpg", "appId": "TICC-2026-APP-025", "name": "Professor Olufemi M. Adesope", "source": "main:prof olufemi.png" },
+    { "file": "finalists/finalist-07-adekunle.jpg", "appId": "TICC-2026-APP-043", "name": "Prof. (Mrs.) Iheoma M. Adekunle", "source": "main:prof. iheoma.png" },
+    { "file": "finalists/finalist-08-henry.jpg", "appId": "TICC-2026-APP-011", "name": "Saviour Henry", "organization": "GeoPredict Technologies", "source": "main:saviour.png" },
+    { "file": "finalists/finalist-09-ndiyo.jpg", "appId": "TICC-2026-APP-058", "name": "Edward Ndiyo", "groupPhoto": true, "source": "main:edward ndiyo.png" },
+    { "file": "finalists/finalist-10-inyang.jpg", "appId": "TICC-2026-APP-067", "name": "Ngozi Inyang", "organization": "DESA Nigeria", "groupPhoto": true, "source": "main:ngozi.png" },
+    { "file": "finalists/finalist-11-etaredafe.jpg", "appId": "TICC-2026-APP-075", "name": "Raphael Etaredafe", "source": "main:raphael.png" },
+    { "file": "finalists/finalist-12-izionworu.jpg", "appId": "TICC-2026-APP-005", "name": "Engr. Dr. Izionworu, Vincent Onuegbu", "organization": "Rivers State University", "source": "main:engr vincent.png" },
+    { "file": "finalists/finalist-13-ace-cefor2.jpg", "appId": "TICC-2026-APP-041", "name": "Prof. Ikechukwu O. Agbag (team contact)", "organization": "ACE-CEFOR 2, UNIPORT", "source": "main:ace-cefafor2.png" },
+    { "file": "finalists/finalist-14-news-team.jpg", "appId": "TICC-2026-APP-061", "name": "New Engineering Nig. Ltd. Team", "groupPhoto": true, "source": "main:new engineering.png" },
+    { "file": "finalists/finalist-15-nurudeen.jpg", "appId": "TICC-2026-APP-062", "name": "Abdul Nurudeen", "source": "main:abdul nurudeen.png" }
+  ]
+}
