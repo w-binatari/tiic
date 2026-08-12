@@ -3702,3 +3702,478 @@ section:nth-child(even):not(.hero):not(.page-hero):not(.cta-band):not(.tiles-sec
         flex-direction: column;
     }
 }
+
+/* ========================================
+   Brochure inserts — ES quote, leadership, judges, finalists
+   ======================================== */
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.es-appreciation {
+    padding: 2.5rem 0 3rem;
+    background:
+        radial-gradient(circle at 0% 50%, rgba(240, 180, 41, 0.12), transparent 40%),
+        linear-gradient(180deg, #f7faf8 0%, #fff 100%);
+    border-bottom: 1px solid var(--border);
+}
+
+.es-appreciation-inner {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 1.75rem;
+    align-items: start;
+    max-width: 52rem;
+    margin: 0 auto;
+}
+
+.es-appreciation-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--ncdmb-gold);
+    box-shadow: 0 8px 24px rgba(0, 77, 41, 0.12);
+    background: var(--ncdmb-green-light);
+}
+
+.es-appreciation-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+}
+
+.es-appreciation-quote {
+    margin: 0;
+}
+
+.es-appreciation-quote p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--ink);
+    font-style: italic;
+    margin: 0 0 1.25rem;
+}
+
+.es-appreciation-quote footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.es-appreciation-quote cite {
+    font-style: normal;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--ncdmb-green-dark);
+    font-size: 1rem;
+}
+
+.es-appreciation-quote footer span {
+    color: var(--ink-muted);
+    font-size: 0.88rem;
+}
+
+.leadership-section,
+.judges-section {
+    padding: var(--section-pad) 0;
+}
+
+.leadership-section {
+    background: linear-gradient(180deg, #fff 0%, #f7faf8 100%);
+}
+
+.judges-section {
+    background: #fff;
+    border-top: 1px solid var(--border);
+}
+
+.portrait-grid {
+    display: grid;
+    gap: 1.15rem;
+    margin-top: 2rem;
+}
+
+.portrait-grid--4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.portrait-grid--5 {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.portrait-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.portrait-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 77, 41, 0.1);
+    transform: translateY(-2px);
+}
+
+.portrait-card-photo {
+    overflow: hidden;
+    background: var(--ncdmb-green-light);
+}
+
+.portrait-card-photo img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+}
+
+.portrait-card-body {
+    padding: 1rem 1.05rem 1.15rem;
+}
+
+.portrait-card-body h3 {
+    font-size: 0.98rem;
+    color: var(--ncdmb-green-dark);
+    margin: 0 0 0.4rem;
+    line-height: 1.3;
+}
+
+.portrait-card-body p {
+    font-size: 0.8rem;
+    color: var(--ink-muted);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.judges-chair {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0 1.25rem;
+}
+
+.judges-chair .portrait-card {
+    width: min(280px, 100%);
+}
+
+.judges-chair .portrait-card-body h3 {
+    font-size: 1.1rem;
+}
+
+.eicl-service-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.85rem;
+}
+
+.eicl-service-list li {
+    display: grid;
+    gap: 0.15rem;
+    padding-left: 1.1rem;
+    position: relative;
+}
+
+.eicl-service-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.45rem;
+    width: 0.45rem;
+    height: 0.45rem;
+    border-radius: 50%;
+    background: var(--ncdmb-gold);
+}
+
+.eicl-service-list strong {
+    color: var(--ink);
+    font-size: 0.92rem;
+}
+
+.eicl-service-list span {
+    color: var(--ink-muted);
+    font-size: 0.84rem;
+    line-height: 1.45;
+}
+
+.eicl-panel--leadership {
+    display: flex;
+    flex-direction: column;
+}
+
+.eicl-panel--leadership .eicl-leadership-photo {
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 240px;
+}
+
+.eicl-panel--leadership .eicl-leadership-photo img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+}
+
+.eicl-contact-line {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+    margin-top: 1rem;
+    font-size: 0.88rem;
+}
+
+.eicl-contact-line a {
+    color: var(--ncdmb-green);
+    font-weight: 600;
+}
+
+.eicl-partners {
+    margin-top: 1.75rem;
+    padding: 1.25rem 1.5rem;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.eicl-partners h3 {
+    font-size: 0.95rem;
+    color: var(--ncdmb-green-dark);
+    margin: 0 0 0.55rem;
+}
+
+.eicl-partners p {
+    margin: 0;
+    color: var(--ink-muted);
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+
+.finalist-filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.85rem 1.25rem;
+    margin: 1.5rem 0 1.75rem;
+}
+
+.finalist-filters input[type="search"] {
+    flex: 1 1 280px;
+    min-width: 0;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font: inherit;
+    background: #fff;
+}
+
+.finalist-filters input[type="search"]:focus {
+    outline: 2px solid rgba(0, 77, 41, 0.25);
+    border-color: var(--ncdmb-green);
+}
+
+.finalist-filter-count {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--ink-muted);
+}
+
+.finalists-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.finalist-tile {
+    display: flex;
+    flex-direction: column;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.finalist-tile:hover {
+    box-shadow: 0 8px 24px rgba(0, 77, 41, 0.1);
+    transform: translateY(-2px);
+}
+
+.finalist-tile[hidden] {
+    display: none;
+}
+
+.finalist-photo {
+    overflow: hidden;
+    background: var(--ncdmb-green-light);
+}
+
+.finalist-photo img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+}
+
+.finalist-photo--group img {
+    aspect-ratio: 16 / 10;
+    object-position: center;
+}
+
+.finalist-tile-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    padding: 1.1rem 1.15rem 1.25rem;
+    flex: 1;
+}
+
+.finalist-tile-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem 0.65rem;
+    align-items: center;
+}
+
+.finalist-badge {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background: var(--ncdmb-gold);
+    color: var(--ncdmb-green-dark);
+    padding: 0.22rem 0.5rem;
+    border-radius: 3px;
+}
+
+.finalist-tile .finalist-app-id {
+    margin: 0;
+    font-size: 0.72rem;
+    letter-spacing: 0.02em;
+    color: var(--ink-muted);
+}
+
+.finalist-tile h3 {
+    margin: 0.15rem 0 0;
+    font-size: 1.02rem;
+    color: var(--ncdmb-green-dark);
+    line-height: 1.3;
+}
+
+.finalist-tile .finalist-org {
+    margin: 0;
+    font-size: 0.82rem;
+    color: var(--ink-muted);
+}
+
+.finalist-tile .finalist-project {
+    margin: 0.15rem 0 0;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.45;
+}
+
+.finalist-tile .finalist-project.is-truncated {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.finalist-tile .finalist-project.is-expanded {
+    display: block;
+}
+
+.finalist-read-more {
+    align-self: flex-start;
+    border: 0;
+    background: transparent;
+    color: var(--ncdmb-green);
+    font: inherit;
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 0;
+    cursor: pointer;
+}
+
+.finalist-read-more:hover {
+    color: var(--ncdmb-green-dark);
+    text-decoration: underline;
+}
+
+.finalist-tile .finalist-blurb {
+    margin: 0.35rem 0 0;
+    font-size: 0.84rem;
+    color: var(--ink-muted);
+    line-height: 1.55;
+}
+
+@media (max-width: 1100px) {
+    .portrait-grid--4,
+    .portrait-grid--5,
+    .finalists-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .portrait-grid--4,
+    .portrait-grid--5,
+    .finalists-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .es-appreciation-inner {
+        grid-template-columns: 96px 1fr;
+        gap: 1.25rem;
+    }
+
+    .es-appreciation-photo {
+        width: 96px;
+        height: 96px;
+    }
+}
+
+@media (max-width: 640px) {
+    .portrait-grid--4,
+    .portrait-grid--5,
+    .finalists-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .es-appreciation-inner {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .es-appreciation-quote footer {
+        align-items: center;
+    }
+
+    .judges-chair .portrait-card {
+        width: 100%;
+    }
+
+    .portrait-card:hover,
+    .finalist-tile:hover {
+        transform: none;
+    }
+}
