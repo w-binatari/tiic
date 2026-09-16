@@ -491,10 +491,10 @@ section {
 
 .governor-media img {
     width: 100%;
-    height: clamp(320px, 52vh, 520px);
+    height: clamp(360px, 56vh, 560px);
     object-fit: cover;
-    object-position: 28% 20%;
-    filter: contrast(1.04) saturate(1.05);
+    object-position: center 12%;
+    filter: contrast(1.03) saturate(1.02);
 }
 
 .governor-copy .section-eyebrow {
