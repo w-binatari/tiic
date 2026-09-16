@@ -469,6 +469,58 @@ section {
     background: var(--surface-alt);
 }
 
+.section-governor {
+    background: var(--moyd-black);
+    color: #fff;
+    overflow: hidden;
+}
+
+.governor-grid {
+    display: grid;
+    grid-template-columns: minmax(240px, 0.9fr) 1.1fr;
+    gap: clamp(1.5rem, 4vw, 3rem);
+    align-items: center;
+}
+
+.governor-media {
+    margin: 0;
+    border: 1px solid rgba(205, 154, 61, 0.35);
+    overflow: hidden;
+    background: #111;
+}
+
+.governor-media img {
+    width: 100%;
+    height: clamp(320px, 52vh, 520px);
+    object-fit: cover;
+    object-position: 28% 20%;
+    filter: contrast(1.04) saturate(1.05);
+}
+
+.governor-copy .section-eyebrow {
+    color: var(--moyd-gold);
+}
+
+.governor-copy .section-title {
+    color: #fff;
+}
+
+.governor-role {
+    font-family: var(--font-heading);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--moyd-gold);
+    margin-bottom: 1rem;
+}
+
+.governor-copy p {
+    color: rgba(255, 255, 255, 0.82);
+    max-width: 52ch;
+    margin-bottom: 0.85rem;
+}
+
 /* About */
 .about-grid {
     display: grid;
@@ -1157,8 +1209,13 @@ section {
 
 @media (max-width: 860px) {
     .about-grid,
-    .organisers-grid {
+    .organisers-grid,
+    .governor-grid {
         grid-template-columns: 1fr;
+    }
+
+    .governor-media img {
+        height: 360px;
     }
 
     .footer-main-inner {
