@@ -16,9 +16,9 @@ window.DIRI_CONTENT = {
   applicationsOpenLabel: "2 October 2026",
   applicationsCloseLabel: "22 October 2026",
 
-  applyUrl: "", // external portal — leave blank for "Coming soon"
+  applyUrl: "", // external portal — leave blank until client confirms
   applyLabel: "Apply Now",
-  applyPendingLabel: "Applications open 2 Oct 2026",
+  applyPendingLabel: "Apply Now",
 
   contact: {
     email: "info@moyd.by.gov.ng",

@@ -129,16 +129,14 @@ function initApplyCtas(C) {
             el.setAttribute('rel', 'noopener');
             el.textContent = C.applyLabel;
             el.classList.remove('is-pending');
+            el.removeAttribute('aria-disabled');
         } else {
             el.setAttribute('href', '#apply');
             el.removeAttribute('target');
-            el.textContent = C.applyPendingLabel || C.applyLabel;
+            el.removeAttribute('rel');
+            el.textContent = C.applyLabel;
             el.classList.add('is-pending');
-            el.addEventListener('click', (e) => {
-                // Keep scroll to #apply working; no external portal yet
-                if (el.getAttribute('href') === '#apply') return;
-                e.preventDefault();
-            });
+            el.setAttribute('title', C.applyPendingLabel || 'Applications open soon');
         }
     });
 }
@@ -364,17 +362,28 @@ function initActiveNav() {
         .map((link) => document.querySelector(link.getAttribute('href')))
         .filter(Boolean);
 
+    const clear = () => links.forEach((link) => link.classList.remove('active'));
+
     const io = new IntersectionObserver(
         (entries) => {
-            entries.forEach((entry) => {
-                if (!entry.isIntersecting) return;
-                const id = entry.target.getAttribute('id');
-                links.forEach((link) => {
-                    link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
-                });
+            const visible = entries
+                .filter((entry) => entry.isIntersecting)
+                .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+            if (!visible) return;
+            const id = visible.target.getAttribute('id');
+            links.forEach((link) => {
+                link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
             });
         },
-        { rootMargin: `-${getScrollOffset()}px 0px -55% 0px`, threshold: 0 }
+        { rootMargin: `-${getScrollOffset()}px 0px -60% 0px`, threshold: [0.15, 0.35, 0.55] }
     );
     sections.forEach((s) => io.observe(s));
+
+    window.addEventListener(
+        'scroll',
+        () => {
+            if (window.scrollY < 120) clear();
+        },
+        { passive: true }
+    );
 }
