@@ -1,0 +1,35 @@
+name: Deploy Diri one-pager
+
+on:
+  push:
+    branches: [cursor/diri-innovation-challenge-onepager-4a66]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: deploy-diri-onepager
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build static site bundle
+        run: |
+          mkdir -p _site
+          cp index.html _site/
+          cp -r css js assets _site/
+          touch _site/.nojekyll
+
+      - name: Deploy to gh-pages-diri
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          publish_branch: gh-pages-diri
