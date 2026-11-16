@@ -1,0 +1,210 @@
+@import "tailwindcss";
+
+@theme {
+  --color-forest: #0a3d24;
+  --color-forest-deep: #062818;
+  --color-green: #006837;
+  --color-green-bright: #1f8a4c;
+  --color-gold: #f0b429;
+  --color-gold-deep: #c98f0a;
+  --color-mint: #eaf3ec;
+  --color-mint-line: #cfe2d4;
+  --color-ink: #10231a;
+  --color-ink-soft: #3d5247;
+  --color-ink-mute: #5b6e63;
+  --color-paper: #ffffff;
+
+  --font-display: var(--font-mulish), "Mulish", system-ui, sans-serif;
+  --font-sans: var(--font-lato), "Lato", system-ui, sans-serif;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-forest-deep);
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-gold);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  a {
+    text-underline-offset: 0.22em;
+    text-decoration-thickness: 1px;
+  }
+
+  input,
+  textarea,
+  select {
+    caret-color: var(--color-green);
+  }
+
+  ::placeholder {
+    color: var(--color-ink-mute);
+    opacity: 1;
+  }
+}
+
+@layer components {
+  .wrap {
+    width: 100%;
+    max-width: 78rem;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+  @media (min-width: 640px) {
+    .wrap {
+      padding-inline: 2rem;
+    }
+  }
+
+  .nav-link {
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .btn-gold {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    min-height: 3.25rem;
+    padding: 0.9rem 1.6rem;
+    background: var(--color-gold);
+    color: var(--color-forest-deep);
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 0.95rem;
+    letter-spacing: 0.01em;
+    transition:
+      background-color 200ms var(--ease-out-expo),
+      transform 200ms var(--ease-out-expo);
+  }
+  .btn-gold:hover {
+    background: #ffc843;
+  }
+  .btn-gold:active {
+    transform: translateY(1px);
+  }
+  .btn-gold:disabled {
+    opacity: 0.6;
+    cursor: progress;
+  }
+
+  .btn-green {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    min-height: 3.25rem;
+    padding: 0.9rem 1.6rem;
+    background: var(--color-green);
+    color: #fff;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 0.95rem;
+    transition: background-color 200ms var(--ease-out-expo);
+  }
+  .btn-green:hover {
+    background: var(--color-forest);
+  }
+  .btn-green:disabled {
+    opacity: 0.6;
+    cursor: progress;
+  }
+
+  .link-arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-family: var(--font-display);
+    font-weight: 800;
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+    transition: text-decoration-color 200ms;
+  }
+  .link-arrow:hover {
+    text-decoration-color: currentColor;
+  }
+
+  .field {
+    width: 100%;
+    min-height: 3.1rem;
+    padding: 0.75rem 0.9rem;
+    background: #fff;
+    border: 1px solid var(--color-mint-line);
+    border-bottom: 2px solid var(--color-green);
+    color: var(--color-ink);
+    font-size: 1rem;
+    transition: border-color 150ms;
+  }
+  .field:focus {
+    outline: none;
+    border-color: var(--color-green);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-gold) 55%, transparent);
+  }
+  .field[aria-invalid="true"] {
+    border-bottom-color: #b42318;
+  }
+
+  .label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 0.9rem;
+  }
+
+  .prose-tic p + p {
+    margin-top: 1.1em;
+  }
+}
+
+/* One authored motion: photos unclip upward the first time they enter the view. */
+@media (prefers-reduced-motion: no-preference) {
+  /* Visible by default; only armed (by script) when it starts below the fold. */
+  .reveal-clip[data-armed] {
+    transition:
+      clip-path 1100ms var(--ease-out-expo),
+      opacity 900ms var(--ease-out-expo);
+  }
+  .reveal-clip[data-armed]:not(.is-in) {
+    clip-path: inset(18% 0 0 0);
+    opacity: 0.4;
+  }
+}

@@ -1,11 +1,10 @@
 .DS_Store
-.venv/
-__pycache__/
-.vercel
-
 node_modules/
+.next/
+out/
 .vercel/
-
-# Source dump (deployed copies live under assets/images/gallery)
-/gallery/
 .env*
+!.env.example
+*.tsbuildinfo
+next-env.d.ts
+.impeccable/review/
